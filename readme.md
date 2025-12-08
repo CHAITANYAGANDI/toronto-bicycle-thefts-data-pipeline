@@ -205,18 +205,45 @@ The `Data Analysis/bicycle_theft_analysis.sql` file contains:
     - `time_of_day` - Morning/Afternoon/Evening/Night classification
   - Designed for QuickSight with global filters and calculated fields
 
-### QuickSight
+### 📊 BI & Visualization Layer (Amazon QuickSight)
 
-1. Set up QuickSight in the same AWS region
-2. Create a data source connected to RDS
-3. Import `vw_master_table` as the primary dataset
-4. Build dashboards with:
-   - Geospatial maps (lat/long theft locations)
-   - Time-series trends (yearly/monthly patterns)
-   - Bar charts (by division, premises type, bike type)
-   - Filters for year, division, bike type, status, season, and time of day
+The dashboard is built on a **"Single Pane of Glass"** architecture, utilizing a flattened "Master Table" to enable high-performance, in-memory analysis.
 
----
+#### **Technical Implementation**
+* **Data Modeling:** Implemented a single `vw_master_table` containing granular theft records enriched with `Time_of_Day`, `Season`, and standardized `Brand_Names`.
+* **SPICE Optimization:** Utilized QuickSight's **SPICE** (Super-fast, Parallel, In-memory Calculation Engine) to cache the dataset, achieving sub-second load times for 10+ years of geospatial data.
+* **Omni-Directional Interactivity:** Configured bi-directional "Filter Actions" on all visuals. Clicking a specific location on the map instantly filters the KPI cards, trend lines, and risk matrices.
+
+#### **Dashboard Features**
+* **Global Controls:** Implemented 5 global filters (Year, Neighborhood, Bike Type, Day, Time) to slice the entire dataset simultaneously.
+* **Drill-Down Hierarchy:** Time-series charts enable one-click zooming from **Annual Trends** down to **Monthly Seasonality**.
+* **Dynamic KPIs:** Top-row metrics (Volume, Recovery Rate, Economic Impact) instantly recalculate based on user interactions.
+
+#### **Visual Gallery**
+
+**1. The "Single Pane of Glass" Dashboard**
+*(Fit to Window layout ensuring zero scrolling on any device)*
+![Dashboard Full View](./Dashboard_Visuals/dashboard_full_overview.png)
+
+**2. Interactive Controls & KPIs**
+*Top: 5-Factor Global Filter Bar. Bottom: Context-Aware KPI Cockpit.*
+| Global Filter Controls | Dynamic KPI Header |
+| :---: | :---: |
+| ![Global Filter](./Dashboard_Visuals/Global%20Filter.png) | ![KPI Header](./Dashboard_Visuals/kpi_metrics_header.png) |
+
+**3. Spatial Analysis (Clustering & Recovery Status)**
+*Geospatial clustering allows instant identification of high-loss zones (Orange) vs. recovery zones (Blue).*
+![Map Clustering](./Dashboard_Visuals/geospatial_risk_map.png)
+
+**4. Behavioral Risk & Market Analysis**
+*Left: Heatmap matrix revealing "Danger Zones". Right: 10-Year Theft Trend. Bottom: Top Targeted Brands.*
+| Behavioral Risk Heatmap | Temporal Trend Analysis |
+| :---: | :---: |
+| ![Heatmap](./Dashboard_Visuals/behavioral_risk_heatmap.png) | ![Trend Line](./Dashboard_Visuals/temporal_trend_analysis.png) |
+
+**Top Targeted Brands**
+*(Ranking of most stolen bicycle makes)*
+![Top Brands](./Dashboard_Visuals/top_targeted_brands.png)
 
 ## Key Findings
 
