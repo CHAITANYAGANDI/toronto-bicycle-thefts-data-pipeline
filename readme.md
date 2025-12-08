@@ -229,7 +229,7 @@ The dashboard is built on a **"Single Pane of Glass"** architecture, utilizing a
 *Top: 5-Factor Global Filter Bar. Bottom: Context-Aware KPI Cockpit.*
 | Global Filter Controls | Dynamic KPI Header |
 | :---: | :---: |
-| ![Global Filter](./Dashboard_Visuals/Global%20Filter.png) | ![KPI Header](./Dashboard_Visuals/kpi_metrics_header.png) |
+| ![Global Filter](./Dashboard_Visuals/global_filter_controls.png) | ![KPI Header](./Dashboard_Visuals/kpi_metrics_header.png) |
 
 **3. Spatial Analysis (Clustering & Recovery Status)**
 *Geospatial clustering allows instant identification of high-loss zones (Orange) vs. recovery zones (Blue).*
