@@ -231,19 +231,17 @@ The dashboard is built on a **"Single Pane of Glass"** architecture, utilizing a
 | :---: | :---: |
 | ![Global Filter](./Dashboard_Visuals/global_filter_controls.png) | ![KPI Header](./Dashboard_Visuals/kpi_metrics_header.png) |
 
-**3. Spatial Analysis (Clustering & Recovery Status)**
-*Geospatial clustering allows instant identification of high-loss zones (Orange) vs. recovery zones (Blue).*
-![Map Clustering](./Dashboard_Visuals/geospatial_risk_map.png)
+**3. Spatial & Temporal Analysis**
+*Left: Geospatial clustering (Orange=Stolen, Blue=Recovered). Right: 10-Year Theft Trend with Drill-Down.*
+| Geographic Distribution of Thefts | Bicycle Theft Trends |
+| :---: | :---: |
+| ![Map Clustering](./Dashboard_Visuals/geospatial_risk_map.png) | ![Trend Line](./Dashboard_Visuals/temporal_trend_analysis.png) |
 
 **4. Behavioral Risk & Market Analysis**
-*Left: Heatmap matrix revealing "Danger Zones". Right: 10-Year Theft Trend. Bottom: Top Targeted Brands.*
-| Behavioral Risk Heatmap | Temporal Trend Analysis |
+*Left: Heatmap revealing "Danger Zones" (e.g., Friday Evenings). Right: Ranking of most stolen brands.*
+| Weekly Risk Patterns (Heatmap) | Top 10 Targeted Brands |
 | :---: | :---: |
-| ![Heatmap](./Dashboard_Visuals/behavioral_risk_heatmap.png) | ![Trend Line](./Dashboard_Visuals/temporal_trend_analysis.png) |
-
-**Top Targeted Brands**
-*(Ranking of most stolen bicycle makes)*
-![Top Brands](./Dashboard_Visuals/top_targeted_brands.png)
+| ![Heatmap](./Dashboard_Visuals/behavioral_risk_heatmap.png) | ![Top Brands](./Dashboard_Visuals/top_targeted_brands.png) |
 
 ## Key Findings
 
