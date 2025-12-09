@@ -1,4 +1,4 @@
-# Toronto Bicycle Thefts – Kafka & AWS Data Pipeline 🚲
+# Toronto Bicycle Thefts Data Analysis 🚲
 
 An end-to-end data pipeline and analytics stack for analyzing [Toronto Bicycle Thefts](https://open.toronto.ca/dataset/bicycle-thefts/) using Apache Kafka, AWS services, and interactive dashboards.
 
