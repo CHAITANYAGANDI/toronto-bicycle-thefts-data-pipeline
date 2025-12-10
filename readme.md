@@ -68,16 +68,39 @@ Bike theft is a recurring problem in urban areas. While the Toronto Police Servi
 ```
 .
 ├── Data Architecture Diagram/
-│   └── [Architecture diagrams and visuals]
+│   └── Toronto_Bicycle_Thefts_Data_Architecture.jpg  # Pipeline architecture diagram
 ├── Dataset/
-│   └── bicycle-thefts-4326.csv           # Raw sample for local testing
+│   └── bicycle-thefts-4326.csv                        # Raw Toronto Open Data CSV
 ├── Scripts/
-│   ├── bicycle_thefts_producer.py        # Kafka producer script
-│   ├── bicycle_thefts_consumer.py        # Kafka consumer + ETL script
-│   └── bicycle_theft_analysis.sql        # SQL queries and views
+│   ├── bicycle_thefts_producer.py                     # Kafka producer script
+│   ├── bicycle_thefts_consumer.py                     # Kafka consumer + ETL script
+│   └── bicycle_theft_analysis.sql                     # SQL queries and views
+├── Dashboard_Visuals/
+│   ├── behavioral_risk_heatmap.png                    # Day × Time heatmap
+│   ├── dashboard_full_overview.png                    # Complete dashboard view
+│   ├── geospatial_risk_map.png                        # Interactive theft map
+│   ├── global_filter_controls.png                     # Global filter panel
+│   ├── kpi_metrics_header.png                         # KPI metrics cockpit
+│   ├── temporal_trend_analysis.png                    # Time-series trends
+│   └── top_targeted_brands.png                        # Brand analysis chart
 ├── Data Analysis/
-│   ├── bicycle_theft_analysis.sql        # Complete SQL analysis queries
-│   └── Key_Findings_Report.pdf           # Analysis findings and insights
+│   ├── Visuals/
+│   │   ├── 01_peak_theft_hours.png                    # Hourly distribution
+│   │   ├── 02_top_hotspots.png                        # Premises type breakdown
+│   │   ├── 03_yearly_trends.png                       # Annual trends 2014-2024
+│   │   ├── 04_stolen_bike_brands.png                  # Brand targeting analysis
+│   │   ├── 05_seasonal_patterns.png                   # Monthly seasonality
+│   │   ├── 06_location_type_risk.png                  # Location vulnerability
+│   │   ├── 07_police_division_performance.png         # Division recovery rates
+│   │   ├── 08_year_over_r_change.png                  # YoY percentage changes
+│   │   ├── prevention_strategy_4pillar.png            # 4-pillar strategy diagram
+│   │   └── risk_assessment_matrix.png                 # Risk assessment matrix
+│   ├── bicycle_theft_analysis.sql                     # 15 queries + 6 views + master table
+│   └── Key_Findings_Report.pdf                        # Analysis findings document
+├── Report/
+│   └── Toronto_Bicycle_Thefts_Final_Report.pdf       # Complete project report
+├── Presentation/
+│   └── Toronto_Bicycle_Thefts_Presentation.pdf       # Team presentation slides
 └── README.md
 ```
 
